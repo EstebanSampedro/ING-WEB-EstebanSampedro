@@ -1,9 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>INGWEB_SGUniversidad</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="NewFolder3\**" />
+    <Content Remove="NewFolder3\**" />
+    <EmbeddedResource Remove="NewFolder3\**" />
+    <None Remove="NewFolder3\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.16" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
 
 
 </Project>
