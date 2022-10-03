@@ -50,7 +50,7 @@ export class Employee extends Component{
 
     addClick(){
         this.setState({
-            modalTitle:"Add Employee",
+            modalTitle:"Añadir Empleado",
             EmployeeId:0,
             EmployeeName:"",
             Department:"",
@@ -60,7 +60,7 @@ export class Employee extends Component{
     }
     editClick(emp){
         this.setState({
-            modalTitle:"Edit Employee",
+            modalTitle:"Editar Empleado",
             EmployeeId:emp.EmployeeId,
             EmployeeName:emp.EmployeeName,
             Department:emp.Department,
@@ -173,25 +173,25 @@ export class Employee extends Component{
     data-bs-toggle="modal"
     data-bs-target="#exampleModal"
     onClick={()=>this.addClick()}>
-        Add Employee
+        Añadir Empleado
     </button>
     <table className="table table-striped">
     <thead>
     <tr>
         <th>
-            EmployeeId
+            ID Empleado
         </th>
         <th>
-            EmployeeName
+            Nombre del Empleado
         </th>
         <th>
-            Department
+            Departamento
         </th>
         <th>
-            DOJ
+            Activo desde
         </th>
         <th>
-            Options
+            Opciones
         </th>
     </tr>
     </thead>
@@ -280,14 +280,14 @@ export class Employee extends Component{
         <button type="button"
         className="btn btn-primary float-start"
         onClick={()=>this.createClick()}
-        >Create</button>
+        >Añadir</button>
         :null}
 
         {EmployeeId!=0?
         <button type="button"
         className="btn btn-primary float-start"
         onClick={()=>this.updateClick()}
-        >Update</button>
+        >Editar</button>
         :null}
    </div>
 
