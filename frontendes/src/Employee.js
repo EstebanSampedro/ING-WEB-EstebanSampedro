@@ -118,7 +118,7 @@ export class Employee extends Component{
     }
 
     deleteClick(id){
-        if(window.confirm('Are you sure?')){
+        if(window.confirm('Estás seguro que quieres eliminar este empleado?')){
         fetch(variables.API_URL+'employee/'+id,{
             method:'DELETE',
             headers:{
@@ -243,14 +243,14 @@ export class Employee extends Component{
      <div className="p-2 w-50 bd-highlight">
     
         <div className="input-group mb-3">
-            <span className="input-group-text">Emp Name</span>
+            <span className="input-group-text">Nombre del Empleado</span>
             <input type="text" className="form-control"
             value={EmployeeName}
             onChange={this.changeEmployeeName}/>
         </div>
 
         <div className="input-group mb-3">
-            <span className="input-group-text">Department</span>
+            <span className="input-group-text">Departamento</span>
             <select className="form-select"
             onChange={this.changeDepartment}
             value={Department}>
@@ -261,7 +261,7 @@ export class Employee extends Component{
         </div>
 
         <div className="input-group mb-3">
-            <span className="input-group-text">DOJ</span>
+            <span className="input-group-text">Activo desde</span>
             <input type="date" className="form-control"
             value={DateOfJoining}
             onChange={this.changeDateOfJoining}/>
