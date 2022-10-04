@@ -77,14 +77,14 @@ export class Department extends Component{
 
     addClick(){
         this.setState({
-            modalTitle:"Add Department",
+            modalTitle:"Crear Departamento",
             DepartmentId:0,
             DepartmentName:""
         });
     }
     editClick(dep){
         this.setState({
-            modalTitle:"Edit Department",
+            modalTitle:"Editar Departamento",
             DepartmentId:dep.DepartmentId,
             DepartmentName:dep.DepartmentName
         });
@@ -133,7 +133,7 @@ export class Department extends Component{
     }
 
     deleteClick(id){
-        if(window.confirm('Are you sure?')){
+        if(window.confirm('Estas seguro que quieres eliminar este elemento?')){
         fetch(variables.API_URL+'department/'+id,{
             method:'DELETE',
             headers:{
@@ -167,7 +167,7 @@ export class Department extends Component{
     data-bs-toggle="modal"
     data-bs-target="#exampleModal"
     onClick={()=>this.addClick()}>
-        Add Department
+        Crear Departamento
     </button>
     <table className="table table-striped">
     <thead>
@@ -195,7 +195,7 @@ export class Department extends Component{
             </button>
 
             </div>
-            DepartmentId
+            ID Departamento
         </th>
         <th>
         <div className="d-flex flex-row">
@@ -217,11 +217,11 @@ export class Department extends Component{
                 </svg>
             </button>
             </div>
-            DepartmentName
+            Nombre del Departamento
       
         </th>
         <th>
-            Options
+            Opciones
         </th>
     </tr>
     </thead>
@@ -267,7 +267,7 @@ export class Department extends Component{
 
    <div className="modal-body">
        <div className="input-group mb-3">
-        <span className="input-group-text">DepartmentName</span>
+        <span className="input-group-text">Nombre del Departmento</span>
         <input type="text" className="form-control"
         value={DepartmentName}
         onChange={this.changeDepartmentName}/>
@@ -277,14 +277,14 @@ export class Department extends Component{
         <button type="button"
         className="btn btn-primary float-start"
         onClick={()=>this.createClick()}
-        >Create</button>
+        >Crear</button>
         :null}
 
         {DepartmentId!=0?
         <button type="button"
         className="btn btn-primary float-start"
         onClick={()=>this.updateClick()}
-        >Update</button>
+        >Editar</button>
         :null}
 
    </div>

@@ -50,7 +50,7 @@ export class Employee extends Component{
 
     addClick(){
         this.setState({
-            modalTitle:"Add Employee",
+            modalTitle:"Añadir Empleado",
             EmployeeId:0,
             EmployeeName:"",
             Department:"",
@@ -60,7 +60,7 @@ export class Employee extends Component{
     }
     editClick(emp){
         this.setState({
-            modalTitle:"Edit Employee",
+            modalTitle:"Editar Empleado",
             EmployeeId:emp.EmployeeId,
             EmployeeName:emp.EmployeeName,
             Department:emp.Department,
@@ -118,7 +118,7 @@ export class Employee extends Component{
     }
 
     deleteClick(id){
-        if(window.confirm('Are you sure?')){
+        if(window.confirm('Estás seguro que quieres eliminar este empleado?')){
         fetch(variables.API_URL+'employee/'+id,{
             method:'DELETE',
             headers:{
@@ -173,25 +173,25 @@ export class Employee extends Component{
     data-bs-toggle="modal"
     data-bs-target="#exampleModal"
     onClick={()=>this.addClick()}>
-        Add Employee
+        Añadir Empleado
     </button>
     <table className="table table-striped">
     <thead>
     <tr>
         <th>
-            EmployeeId
+            ID Empleado
         </th>
         <th>
-            EmployeeName
+            Nombre del Empleado
         </th>
         <th>
-            Department
+            Departamento
         </th>
         <th>
-            DOJ
+            Activo desde
         </th>
         <th>
-            Options
+            Opciones
         </th>
     </tr>
     </thead>
@@ -243,14 +243,14 @@ export class Employee extends Component{
      <div className="p-2 w-50 bd-highlight">
     
         <div className="input-group mb-3">
-            <span className="input-group-text">Emp Name</span>
+            <span className="input-group-text">Nombre del Empleado</span>
             <input type="text" className="form-control"
             value={EmployeeName}
             onChange={this.changeEmployeeName}/>
         </div>
 
         <div className="input-group mb-3">
-            <span className="input-group-text">Department</span>
+            <span className="input-group-text">Departamento</span>
             <select className="form-select"
             onChange={this.changeDepartment}
             value={Department}>
@@ -261,7 +261,7 @@ export class Employee extends Component{
         </div>
 
         <div className="input-group mb-3">
-            <span className="input-group-text">DOJ</span>
+            <span className="input-group-text">Activo desde</span>
             <input type="date" className="form-control"
             value={DateOfJoining}
             onChange={this.changeDateOfJoining}/>
@@ -270,8 +270,8 @@ export class Employee extends Component{
 
      </div>
      <div className="p-2 w-50 bd-highlight">
-         <img width="250px" height="250px"
-         src={PhotoPath+PhotoFileName}/>
+         <img 
+         src={PhotoPath+PhotoFileName} alt=""/>
          <input className="m-2" type="file" onChange={this.imageUpload}/>
      </div>
     </div>
@@ -280,14 +280,14 @@ export class Employee extends Component{
         <button type="button"
         className="btn btn-primary float-start"
         onClick={()=>this.createClick()}
-        >Create</button>
+        >Añadir</button>
         :null}
 
         {EmployeeId!=0?
         <button type="button"
         className="btn btn-primary float-start"
         onClick={()=>this.updateClick()}
-        >Update</button>
+        >Editar</button>
         :null}
    </div>
 

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Home} from './Home';
 import {Department} from './Department';
@@ -10,33 +9,33 @@ function App() {
     <BrowserRouter>
     <div className="App container">
       <h3 className="d-flex justify-content-center m-3">
-        React JS Frontend
+        Sistema de Gestión de Personal - Universidad
       </h3>
         
       <nav className="navbar navbar-expand-sm bg-light navbar-dark">
         <ul className="navbar-nav">
           <li className="nav-item- m-1">
             <NavLink className="btn btn-light btn-outline-primary" to="/home">
-              Home
+              Inicio
             </NavLink>
           </li>
           <li className="nav-item- m-1">
             <NavLink className="btn btn-light btn-outline-primary" to="/department">
-              Department
+              Departamento
             </NavLink>
           </li>
           <li className="nav-item- m-1">
             <NavLink className="btn btn-light btn-outline-primary" to="/employee">
-              Employee
+              Empleado
             </NavLink>
           </li>
         </ul>
       </nav>
 
       <Routes>
-        <Route path='/home' element={Home}/>
-        <Route path='/department' element={Department}/>
-        <Route path='/employee' element={Employee}/>
+        <Route path="/home" element={<Home />} />
+        <Route path="/department" element={<Department />} />
+        <Route path="/employee" element={<Employee />} />
       </Routes>
     </div>
     </BrowserRouter>
