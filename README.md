@@ -2,7 +2,7 @@
 ![imagen](https://user-images.githubusercontent.com/62622922/193914090-0a151c9f-8f49-4be5-8638-2b5dcca2f899.png)
 
 
-**Visualización del sistema en funcionamiento**
+**Visualización del sistema en funcionamiento (CRUD)**
 
 ## Herramientas utilizadas:
 - React.js (FrontEnd)
