@@ -270,8 +270,8 @@ export class Employee extends Component{
 
      </div>
      <div className="p-2 w-50 bd-highlight">
-         <img width="250px" height="250px"
-         src={PhotoPath+PhotoFileName}/>
+         <img 
+         src={PhotoPath+PhotoFileName} alt=""/>
          <input className="m-2" type="file" onChange={this.imageUpload}/>
      </div>
     </div>
