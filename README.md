@@ -4,12 +4,12 @@
 
 **Visualización del sistema en funcionamiento (CRUD)**
 
-## Herramientas utilizadas:
+## Herramientas utilizadas
 - React.js (FrontEnd)
 - .NET Core (BackEnd)
 - SQL SERVER
 
-## Especificaciones de uso:
+## Especificaciones de uso
 ### Paso 1: Script Base de datos
 - Se debe ejecutar el script de base de datos en Microsoft SQL SERVER para generar correctamente la tabla y base de datos que permitirá el almacenamiento de la información de nuestro sistema.
 
